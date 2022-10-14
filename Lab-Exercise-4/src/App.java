@@ -41,6 +41,12 @@ public class App {
 
             System.out.println("Do you want to continue or quit?");
             userPrompt = scan.next();
+
+            while(!checkPrompt(userPrompt)) {
+                System.out.println("Do you want to continue or quit?");
+                userPrompt = scan.next();
+            }
+
         } 
 
         System.out.println("Bye!");
@@ -48,11 +54,10 @@ public class App {
     }
 
     public static boolean isOperator(String operator) {
+        return (operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/")) ? true : false;
+    }
 
-        if (operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/")){
-            return true; 
-        }
-
-        return false;
+    public static boolean checkPrompt(String userPrompt) {
+        return (userPrompt.equals("continue") || userPrompt.equals("quit")) ? true : false;
     }
 }
