@@ -13,19 +13,35 @@ public class Calculator {
         double answer = 0;
 
         if(operator.equals("+")) {
-            answer = num1 + num2;
+            answer = add();
         }
         else if(operator.equals("-")) {
-            answer = num1 - num2;
+            answer = subtract();
         }
         else if(operator.equals("*")) {
-            answer = num1 * num2;
+            answer = multiply();
         }
         else if(operator.equals("/")) {
-            answer = num1 / num2;
+            answer = divide();
         }
-
+        
         return answer;
+    }
+
+    public double add() {
+        return num1 + num2;
+    }
+
+    public double subtract() {
+        return num1 - num2;
+    }
+
+    public double multiply() {
+        return num1 * num2;
+    }
+
+    public double divide() {
+        return num1 / num2;
     }
 
     

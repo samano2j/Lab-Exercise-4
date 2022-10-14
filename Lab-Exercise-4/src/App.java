@@ -12,7 +12,7 @@ public class App {
     
         while(userPrompt.equals("continue")) {
             System.out.println("Please type the first number");
-            num1 = scan.nextInt();
+            num1 = scan.nextDouble();
 
             System.out.println( 
             "Choose an operation: \n" + 
@@ -28,7 +28,7 @@ public class App {
             }
 
             System.out.println("Please type the second number");
-            num2 = scan.nextInt();
+            num2 = scan.nextDouble();
 
             if(operator.equals("/") && num2 == 0) {
                 System.out.println("Cannot divide by zero");
